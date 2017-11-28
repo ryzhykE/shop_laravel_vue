@@ -45969,27 +45969,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -46005,7 +45984,7 @@ var render = function() {
     "div",
     { attrs: { id: "el" } },
     [
-      _c("nav", { staticClass: "navbar navbar-default navbar-static-top" }, [
+      _c("nav", { staticClass: "navbar navbar-inverse navbar-fixed-top" }, [
         _c("div", { staticClass: "container-fluid" }, [
           _c(
             "div",
@@ -46013,11 +45992,9 @@ var render = function() {
             [
               _vm._m(0, false, false),
               _vm._v(" "),
-              _c(
-                "router-link",
-                { staticClass: "navbar-brand", attrs: { to: { name: "/" } } },
-                [_vm._v("Inventory")]
-              )
+              _c("router-link", { attrs: { to: { name: "home" } } }, [
+                _c("a", [_vm._v("Home")])
+              ])
             ],
             1
           ),
@@ -46025,22 +46002,32 @@ var render = function() {
           _c(
             "div",
             {
-              staticClass: "collapse navbar-collapse",
-              attrs: { id: "app-navbar-collapse" }
+              staticClass: "navbar-collapse collapse",
+              attrs: { id: "navbar" }
             },
             [
-              _c(
-                "ul",
-                { staticClass: "nav navbar-nav navbar-left" },
-                [
-                  _c(
-                    "router-link",
-                    { attrs: { tag: "li", to: { name: "home" } } },
-                    [_c("a", [_vm._v("Home")])]
-                  )
-                ],
-                1
-              )
+              _c("ul", { staticClass: "nav navbar-nav navbar-right" }, [
+                _c(
+                  "li",
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "navbar-brand",
+                        attrs: { to: { name: "/" } }
+                      },
+                      [_vm._v("Inventory")]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _vm._m(1, false, false),
+                _vm._v(" "),
+                _vm._m(2, false, false)
+              ]),
+              _vm._v(" "),
+              _vm._m(3, false, false)
             ]
           )
         ])
@@ -46048,13 +46035,7 @@ var render = function() {
       _vm._v(" "),
       _c("router-view"),
       _vm._v(" "),
-      _c("div", { staticClass: "navbar navbar-default navbar-fixed-bottom" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("p", { staticClass: "navbar-text pull-left" }, [
-            _vm._v("Copyright © " + _vm._s(_vm.dataDate) + "\n                ")
-          ])
-        ])
-      ])
+      _vm._m(4, false, false)
     ],
     1
   )
@@ -46071,17 +46052,63 @@ var staticRenderFns = [
         attrs: {
           type: "button",
           "data-toggle": "collapse",
-          "data-target": "#app-navbar-collapse"
+          "data-target": "#navbar",
+          "aria-expanded": "false",
+          "aria-controls": "navbar"
         }
       },
       [
-        _c("span", { staticClass: "sr-only" }, [_vm._v("Toggle Navigation")]),
+        _c("span", { staticClass: "sr-only" }, [_vm._v("Toggle navigation")]),
         _vm._v(" "),
         _c("span", { staticClass: "icon-bar" }),
         _vm._v(" "),
         _c("span", { staticClass: "icon-bar" }),
         _vm._v(" "),
         _c("span", { staticClass: "icon-bar" })
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Profile")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Help")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "navbar-form navbar-right" }, [
+      _c("input", {
+        staticClass: "form-control",
+        attrs: { type: "text", placeholder: "Text search..." }
+      }),
+      _vm._v(" "),
+      _c("a", { attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fs fa-search" }),
+        _vm._v("Search")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "navbar navbar-default navbar-fixed-bottom" },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("p", { staticClass: "navbar-text pull-left" }, [
+            _vm._v("\n                Copyright ©\n            ")
+          ])
+        ])
       ]
     )
   }

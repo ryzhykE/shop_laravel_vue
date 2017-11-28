@@ -1,45 +1,47 @@
 <template>
     <div  id="el">
-        <nav class="navbar navbar-default navbar-static-top">
-            <!--<nav class="navbar navbar-inverse navbar-static-top">-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        </button>
-
-                    <!-- Branding Image -->
-                    <router-link class="navbar-brand" :to="{ name: '/' }" >Inventory</router-link>
-                    </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse" >
-                    <!-- Left Side Of Navbar -->
-
-                    <ul  class="nav navbar-nav navbar-left">
-                        <router-link tag="li" :to="{ name: 'home' }"><a>Home</a></router-link>
-                        </ul>
+                    </button>
+                    <router-link  :to="{ name: 'home' }"><a>Home</a></router-link>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><router-link class="navbar-brand" :to="{ name: '/' }" >Inventory</router-link></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                    <div class="navbar-form navbar-right">
+                        <input type="text" class="form-control" placeholder="Text search...">
+                        <a href="#"><i class="fs fa-search"></i>Search</a>
                     </div>
                 </div>
-            </nav>
-       
-            <router-view ></router-view>
-            </transition>
+            </div>
+        </nav>
+        <router-view ></router-view>
+
         <div class="navbar navbar-default navbar-fixed-bottom">
             <div class="container">
-                <p class="navbar-text pull-left">Copyright &copy; {{dataDate}}
-                    </p>
-                </div>
-
-
+                <p class="navbar-text pull-left">
+                    Copyright &copy;
+                </p>
             </div>
-
         </div>
-    </template>
+    </div>
+</template>
+
+<script>
+    export default {
+
+    }
+</script>
+
 <style>
     .fade-enter-active, .fade-leave-active {
         transition: opacity 0.3s
@@ -57,8 +59,3 @@
     }
     </style>
 
-<script>
-    export default {
-     
-    }
-</script>

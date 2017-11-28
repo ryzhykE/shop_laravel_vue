@@ -16,6 +16,16 @@
 
 <script>
     export default {
-       
+       data() {
+           return{
+               products:[],
+           }
+       },
+        methods: {
+            fetchProducts: function() {
+                var self = this;
+                axios.get('api/products').then(response => self.products = response.data.products)
+            },
+        }
     }
 </script>

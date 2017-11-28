@@ -71,7 +71,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            products: []
+        };
+    },
+
+    methods: {
+        fetchProducts: function fetchProducts() {
+            var self = this;
+            axios.get('api/products').then(function (response) {
+                return self.products = response.data.products;
+            });
+        }
+    }
+});
 
 /***/ }),
 
