@@ -85,6 +85,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 return self.products = response.data.products;
             });
         }
+    },
+    created: function created() {
+        this.fetchProducts();
     }
 });
 

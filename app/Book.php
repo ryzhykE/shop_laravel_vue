@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Book extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,12 +12,11 @@ class Product extends Model
      * @var array
      */
     protected $fillable = [
-        'product', 'description', 'details', 'price', 'active', 'id_img'
+        'title', 'description', 'details', 'price', 'discount','active', 'image_id'
     ];
 
     public function image()
     {
-       return $this->belongsTo(Image::class);
+        return $this->belongsTo(Image::class);
     }
-
 }

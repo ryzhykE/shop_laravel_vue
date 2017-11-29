@@ -23,9 +23,12 @@
        },
         methods: {
             fetchProducts: function() {
-                var self = this;
+                let self = this;
                 axios.get('api/products').then(response => self.products = response.data.products)
             },
+        },
+        created(){
+           this.fetchProducts()
         }
     }
 </script>
