@@ -45488,11 +45488,11 @@ if (inBrowser && window.Vue) {
 
 "use strict";
 var Home = function Home(resolve) {
-    return __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(50)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+    return __webpack_require__.e/* require */(0).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(61)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
 };
 
 /* harmony default export */ __webpack_exports__["a"] = ([{
-    path: '/home',
+    path: '/',
     component: Home,
     name: 'home'
 }]);
@@ -45969,6 +45969,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -45984,54 +45989,60 @@ var render = function() {
     "div",
     { attrs: { id: "el" } },
     [
-      _c("nav", { staticClass: "navbar navbar-inverse navbar-fixed-top" }, [
-        _c("div", { staticClass: "container-fluid" }, [
-          _c(
-            "div",
-            { staticClass: "navbar-header" },
-            [
-              _vm._m(0, false, false),
-              _vm._v(" "),
-              _c("router-link", { attrs: { to: { name: "home" } } }, [
-                _c("a", [_vm._v("Home")])
-              ])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "navbar-collapse collapse",
-              attrs: { id: "navbar" }
-            },
-            [
-              _c("ul", { staticClass: "nav navbar-nav navbar-right" }, [
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "navbar-brand",
-                        attrs: { to: { name: "/" } }
-                      },
-                      [_vm._v("Inventory")]
-                    )
-                  ],
-                  1
-                ),
+      _c(
+        "nav",
+        {
+          staticClass: "navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+        },
+        [
+          _c("div", { staticClass: "container-fluid" }, [
+            _c(
+              "div",
+              { staticClass: "navbar-header" },
+              [
+                _vm._m(0, false, false),
                 _vm._v(" "),
-                _vm._m(1, false, false),
+                _c("router-link", { attrs: { to: { name: "home" } } }, [
+                  _c("a", [_vm._v("Home")])
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "navbar-collapse collapse",
+                attrs: { id: "navbar" }
+              },
+              [
+                _c("ul", { staticClass: "nav navbar-nav navbar-right" }, [
+                  _c(
+                    "li",
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "navbar-brand",
+                          attrs: { to: { name: "/" } }
+                        },
+                        [_vm._v("Inventory")]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _vm._m(1, false, false),
+                  _vm._v(" "),
+                  _vm._m(2, false, false)
+                ]),
                 _vm._v(" "),
-                _vm._m(2, false, false)
-              ]),
-              _vm._v(" "),
-              _vm._m(3, false, false)
-            ]
-          )
-        ])
-      ]),
+                _vm._m(3, false, false)
+              ]
+            )
+          ])
+        ]
+      ),
       _vm._v(" "),
       _c("router-view"),
       _vm._v(" "),
@@ -46085,14 +46096,19 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "navbar-form navbar-right" }, [
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "text", placeholder: "Text search..." }
-      }),
-      _vm._v(" "),
-      _c("a", { attrs: { href: "#" } }, [
-        _c("i", { staticClass: "fs fa-search" }),
-        _vm._v("Search")
+      _c("div", { staticClass: "input-group" }, [
+        _c("input", {
+          staticClass: "form-control",
+          attrs: { type: "text", placeholder: "Search for..." }
+        }),
+        _vm._v(" "),
+        _c("span", { staticClass: "input-group-btn" }, [
+          _c(
+            "button",
+            { staticClass: "btn btn-secondary", attrs: { type: "button" } },
+            [_vm._v("Go!")]
+          )
+        ])
       ])
     ])
   },

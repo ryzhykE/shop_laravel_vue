@@ -1,9 +1,8 @@
-const Home = resolve => require(['./components/Home.vue'], resolve);
-
+const Home = resolve => require(['./components/Blog/index.vue'], resolve);
 
 export default [
     {
-        path: '/home',
+        path: '/',
         component: Home,
         name: 'home'
     },

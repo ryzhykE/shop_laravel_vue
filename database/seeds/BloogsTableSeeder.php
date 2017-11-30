@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ImagesTableSeeder extends Seeder
+class BloogsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,30 +11,33 @@ class ImagesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('images')->truncate();
-        $images = [
+        DB::table('blogs')->truncate();
+        $blogs = [
             [
-                'file' => 'http://forcakes.kz/image/cache/catalog/i/dd/je/804f8b251b4e8d5cde5321fc0064d515-200x250.jpg',
+                'title' => 'Article1',
+                'content' => 'Content1',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
             [
-                'file' => 'http://forcakes.kz/image/cache/catalog/i/gm/ll/977fede6645d6f7f7fe806267f1800fa-200x250.jpg',
+                'title' => 'Article2',
+                'content' => 'Content2',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
             [
-                'file' => 'http://forcakes.kz/image/cache/catalog/i/hj/mf/f110e6fbb6ab8ea62207df1ff74954ca-200x250.jpg',
+                'title' => 'Article3',
+                'content' => 'Content3',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ],
             [
-                'file' => 'http://forcakes.kz/image/cache/catalog/i/gl/hl/9a609134476012664c081e2bf584ed97-200x250.jpg',
+                'title' => 'Article4',
+                'content' => 'Content4',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
-            ]
-
+            ],
         ];
-        DB::table('images')->insert($images);
+        DB::table('blogs')->insert($blogs);
     }
 }

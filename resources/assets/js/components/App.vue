@@ -1,6 +1,6 @@
 <template>
     <div  id="el">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -18,12 +18,17 @@
                         <li><a href="#">Help</a></li>
                     </ul>
                     <div class="navbar-form navbar-right">
-                        <input type="text" class="form-control" placeholder="Text search...">
-                        <a href="#"><i class="fs fa-search"></i>Search</a>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button">Go!</button>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
+
         <router-view ></router-view>
 
         <div class="navbar navbar-default navbar-fixed-bottom">
